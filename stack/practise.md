@@ -43,4 +43,4 @@ function m4(str){
         return rindex;
     }
     return -1;
-}```
+}
