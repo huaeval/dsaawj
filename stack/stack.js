@@ -1,31 +1,31 @@
 function Stack() {
-    this.dataStore = []; 
+    this._dataStore = []; 
     this.top = 0;
 }
 
 Stack.prototype.pop = function pop(){
-    if(this.top > 0){
-        return this.dataStore[--this.top];
-    }
+    return this._dataStore[--this.top];
 }
 
 Stack.prototype.push = function push(element){
-    this.dataStore[this.top++] = element;
+    this._dataStore[this.top++] = element;
 }
 
 Stack.prototype.peek = function peek(){
-    if(this.top > 0){
-        return this.dataStore[this.top - 1];
-    }
+    return this._dataStore[this.top - 1];
 }
 
 Stack.prototype.clear = function clear(){
-    this.dataStore = [];
+    this._dataStore = [];
     this.top = 0;
 }
 
 Stack.prototype.length = function length(){
     return this.top;
+}
+
+Stack.prototype.isEmpty = function(){
+    return this.top === 0;
 }
 
 module.exports = Stack;
