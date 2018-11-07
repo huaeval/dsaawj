@@ -16,12 +16,12 @@ function m4(str){
     let strs = str.split("");
     for(let index in strs){
         let stackItem = strs[index];
-        if(stackItem == "("){
+        if(stackItem === "("){
             m4Stack.push({
                 el:stackItem,
                 index:index
             });
-        }else if(stackItem == ")"){
+        }else if(stackItem === ")"){
             if(m4Stack.length() > 0){
                 let litem = m4Stack.pop();
                 //右括弧
